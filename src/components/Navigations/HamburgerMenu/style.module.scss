@@ -1,0 +1,48 @@
+.hamburgerMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-grayDark);
+  opacity: 0.5;
+
+  .logo {
+    font-size: 24px;
+    margin-left: 24px;
+  }
+
+  .menuPc {
+    display: flex;
+    gap: 24px;
+    margin-right: 24px;
+
+    .menuItem {
+      color: var(--color-white);
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .menuSp {
+    margin-right: 24px;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+}

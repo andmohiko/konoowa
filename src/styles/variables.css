@@ -1,0 +1,11 @@
+:root {
+  /* Brand Colors */
+  --color-primary: #2f245c;
+  --color-secondary: #1d2040;
+  --color-tertiary: #babeff;
+  --color-black: #050505;
+  --color-white: #ebebeb;
+
+  --color-grayLight: #b0b0b0;
+  --color-grayDark: #3d3d3d;
+}
