@@ -1,9 +1,8 @@
-import axios from 'axios'
-
 import type { NextPage } from 'next'
 
 import { NewsContainer } from '~/components/Containers/NewsContainer'
 import { DefaultLayout } from '~/components/Layouts/DefaultLayout'
+import { cmsClient } from '~/libs/microcms'
 import { Article } from '~/types/article'
 
 type Props = {
@@ -21,14 +20,7 @@ const News: NextPage<Props> = ({ articles }: Props) => {
 export default News
 
 export async function getStaticProps() {
-  const { data } = await axios.get(
-    `${process.env.NEXT_PUBLIC_MICROCMS_ENDPOINT}/news`,
-    {
-      headers: {
-        'X-API-KEY': process.env.NEXT_PUBLIC_MICROCMS_API_KEY,
-      },
-    },
-  )
+  const data = await cmsClient.get({ endpoint: 'news' })
 
   return {
     props: {
