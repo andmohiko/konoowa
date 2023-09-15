@@ -1,0 +1,13 @@
+.contactForm {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
