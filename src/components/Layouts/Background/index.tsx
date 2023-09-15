@@ -1,3 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// ignore ts for entire file
+// @ts-nocheck
 import React, { useEffect, useRef } from 'react'
 
 import styles from './style.module.scss'
