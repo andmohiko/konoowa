@@ -1,0 +1,62 @@
+.memberCard {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+
+  .profileImage {
+    border-radius: 50%;
+  }
+
+  .texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: var(--color-white);
+
+    gap: 8px;
+
+    .name {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .twitter {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 4px;
+      gap: 4px;
+
+      .twitterId {
+        font-size: 15px;
+      }
+    }
+
+    .gamesList {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+
+      .game {
+        font-size: 15px;
+      }
+    }
+
+    .bio {
+      font-size: 15px;
+      line-height: 1.5;
+      width: 600px;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+  }
+}
