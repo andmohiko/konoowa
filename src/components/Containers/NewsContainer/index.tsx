@@ -9,11 +9,15 @@ type Props = {
 }
 
 export const NewsContainer = ({ articles }: Props): React.ReactElement => {
+  const sortedArticles = articles.sort(
+    (a, b) =>
+      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+  )
   return (
     <div className={styles.newsContainer}>
       <TitleText>News</TitleText>
       <div className={styles.newsList}>
-        {articles.map((article) => (
+        {sortedArticles.map((article) => (
           <ArticleCard key={article.id} article={article} />
         ))}
       </div>

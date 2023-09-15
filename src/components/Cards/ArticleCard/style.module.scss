@@ -5,17 +5,32 @@
   align-items: flex-start;
   gap: 8px;
   color: var(--color-white);
+  width: 300px;
 
-  .publishedAt {
-    font-size: 13px;
+  .headerImage {
+    line-height: 0;
+    width: 100%;
+    height: auto;
   }
 
-  .title {
-    font-size: 18px;
-    line-height: 1.5;
+  .texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
 
-    &:hover {
-      color: var(--color-tertiary);
+    .publishedAt {
+      font-size: 13px;
+    }
+
+    .title {
+      font-size: 16px;
+      line-height: 1.5;
+
+      &:hover {
+        color: var(--color-tertiary);
+      }
     }
   }
 }

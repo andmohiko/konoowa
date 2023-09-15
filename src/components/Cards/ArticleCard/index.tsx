@@ -13,10 +13,17 @@ export const ArticleCard = ({ article }: Props): React.ReactElement => {
   return (
     <Link href={`/news/${article.id}`}>
       <article className={styles.articleCard}>
-        <p className={styles.publishedAt}>
-          {dayjs(article.publishedAt).format('YYYY.MM.DD')}
-        </p>
-        <p className={styles.title}>{article.title}</p>
+        <img
+          src={article.headerImage.url}
+          alt={article.title}
+          className={styles.headerImage}
+        />
+        <div className={styles.texts}>
+          <p className={styles.publishedAt}>
+            {dayjs(article.publishedAt).format('YYYY.MM.DD')}
+          </p>
+          <p className={styles.title}>{article.title}</p>
+        </div>
       </article>
     </Link>
   )

@@ -17,7 +17,7 @@ export type Article = {
   body: string
   category: Category
   description: string
-  headerImage?: HeaderImage
+  headerImage: HeaderImage
   id: string
   publishedAt: string
   revisedAt: string

@@ -2,13 +2,17 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
 
   color: var(--color-white);
 
   .container {
     margin: 70px 0 160px;
-    padding: 40px 16px;
+    padding: 40px 0;
     min-height: calc(100vh - 70px);
+    width: 100%;
+    max-width: 1000px;
   }
 }
