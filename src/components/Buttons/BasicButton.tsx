@@ -18,13 +18,8 @@ type Props = {
 export const BasicButton = ({
   children,
   onClick,
-  importance = 'primary',
-  size = 'md',
   disabled = false,
-  loading = false,
   type = 'button',
-  width,
-  height,
 }: Props): React.ReactElement => {
   return (
     <button
