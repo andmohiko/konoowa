@@ -10,7 +10,11 @@ type Props = {
 export const HamburgerMenu = ({ onClose }: Props): React.ReactElement => {
   return (
     <nav className={styles.hamburgerMenu}>
+      <div className="nonScroll"></div>
       <ul className={styles.menuList}>
+        <li className={styles.menuItem}>
+          <Link href="/">TOP</Link>
+        </li>
         <li className={styles.menuItem}>
           <Link href="/about">ABOUT</Link>
         </li>
@@ -27,14 +31,13 @@ export const HamburgerMenu = ({ onClose }: Props): React.ReactElement => {
           <Link href="/contact">CONTACT</Link>
         </li>
       </ul>
-      <button onClick={onClose}>
+      <button onClick={onClose} className={styles.close}>
         <Image
           src="/images/svgs/close.svg"
           alt="close"
           width={40}
           height={40}
         />
-        Close
       </button>
     </nav>
   )

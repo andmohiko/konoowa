@@ -5,7 +5,7 @@ export const PageHead = (): React.ReactElement => (
     <title>この世の終わりゲーミング</title>
     <meta
       name="description"
-      content="ゲーミングチーム「この世の終わりゲーミング」の公式サイトです"
+      content="このジャングルのようなオンライン戦場で、この世の終わりのようなプレイングをしてくるやつらを正す存在。ゲーミングチーム「この世の終わりゲーミング」の公式サイトです。"
     />
     <link rel="icon" href="/favicon.ico" />
 
@@ -20,7 +20,9 @@ export const PageHead = (): React.ReactElement => (
     <meta property="og:title" content={`この世の終わりゲーミング`} />
     <meta
       property="og:description"
-      content={'ゲーミングチーム「この世の終わりゲーミング」の公式サイトです'}
+      content={
+        'このジャングルのようなオンライン戦場で、この世の終わりのようなプレイングをしてくるやつらを正す存在。ゲーミングチーム「この世の終わりゲーミング」の公式サイトです。'
+      }
     />
     <meta property="og:site_name" content="この世の終わりゲーミング" />
     <meta
