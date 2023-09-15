@@ -1,0 +1,21 @@
+.articleCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--color-white);
+
+  .publishedAt {
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 18px;
+    line-height: 1.5;
+
+    &:hover {
+      color: var(--color-tertiary);
+    }
+  }
+}

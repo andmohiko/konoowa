@@ -1,13 +1,22 @@
 import styles from './style.module.scss'
 
-import { ContactForm } from '~/components/Forms/ContactForm'
+import { ArticleCard } from '~/components/Cards/ArticleCard'
 import { TitleText } from '~/components/Typographys/TitleText'
+import { Article } from '~/types/article'
 
-export const NewsContainer = (): React.ReactElement => {
+type Props = {
+  articles: Array<Article>
+}
+
+export const NewsContainer = ({ articles }: Props): React.ReactElement => {
   return (
-    <div className={styles.contactContainer}>
-      <TitleText>Contact</TitleText>
-      <ContactForm />
+    <div className={styles.newsContainer}>
+      <TitleText>News</TitleText>
+      <div className={styles.newsList}>
+        {articles.map((article) => (
+          <ArticleCard key={article.id} article={article} />
+        ))}
+      </div>
     </div>
   )
 }
