@@ -1,8 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import dayjs from 'dayjs'
 
 import styles from './style.module.scss'
 
-import { ArticleCard } from '~/components/Cards/ArticleCard'
 import { TitleText } from '~/components/Typographys/TitleText'
 import { Article } from '~/types/article'
 
