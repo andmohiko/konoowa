@@ -50,6 +50,12 @@ export const SponsorsContainer = (): React.ReactElement => {
             height={200}
             alt="sponsors"
           />
+          <Image
+            src="/images/sponsors/sankaku.png"
+            width={200}
+            height={200}
+            alt="sponsors"
+          />
         </div>
       </div>
     </div>
