@@ -8,15 +8,15 @@ export const AboutContainer = (): React.ReactElement => {
   return (
     <div className={styles.aboutContainer}>
       <TitleText>About</TitleText>
+      <Image
+        src="/images/konoowa.png"
+        width={820}
+        height={312}
+        alt="この世の終わりゲーミング"
+        className={styles.logo}
+      />
       <div className={styles.aboutContent}>
         <div className={styles.section}>
-          <Image
-            src="/images/konoowa.png"
-            width={820}
-            height={312}
-            alt="この世の終わりゲーミング"
-            className={styles.logo}
-          />
           <p className={styles.paragraph}>
             ゲームをしているとき、この世の終わりみたいなプレイをされてあったまったことはないでしょうか。ラグい射撃Mii、パナしてくるガノン、なぜか特攻するハイドラ。一度は対面したことがあるのではないでしょう。
             <br />
