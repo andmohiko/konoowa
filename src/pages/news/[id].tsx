@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 
 import { ArticleContainer } from '~/components/Containers/ArticleContainer'
-import { DefaultLayout } from '~/components/Layouts/DefaultLayout'
+import { ArticleLayout } from '~/components/Layouts/ArticleLayout'
 import { cmsClient } from '~/libs/microcms'
 import { Article } from '~/types/article'
 
@@ -11,9 +11,9 @@ type Props = {
 
 const News: NextPage<Props> = ({ article }: Props) => {
   return (
-    <DefaultLayout>
+    <ArticleLayout>
       <ArticleContainer article={article} />
-    </DefaultLayout>
+    </ArticleLayout>
   )
 }
 

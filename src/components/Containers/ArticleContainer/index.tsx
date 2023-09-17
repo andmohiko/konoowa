@@ -18,15 +18,17 @@ export const ArticleContainer = ({ article }: Props): React.ReactElement => {
         alt={article.title}
         className={styles.headerImage}
       />
-      <TitleText>{article.title}</TitleText>
-      <p className={styles.publishedAt}>
-        {dayjs(article.publishedAt).format('YYYY.MM.DD')}
-      </p>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `${article.body}`,
-        }}
-      ></div>
+      <div className={styles.texts}>
+        <TitleText level="h2">{article.title}</TitleText>
+        <p className={styles.publishedAt}>
+          {dayjs(article.publishedAt).format('YYYY.MM.DD')}
+        </p>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `${article.body}`,
+          }}
+        ></div>
+      </div>
     </div>
   )
 }
