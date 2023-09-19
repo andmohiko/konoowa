@@ -1,16 +1,37 @@
+import dayjs from 'dayjs'
+
 import type { NextPage } from 'next'
 
+import { TopContainer } from '~/components/Containers/TopContainer'
 import { DefaultLayout } from '~/components/Layouts/DefaultLayout'
+import { cmsClient } from '~/libs/microcms'
+import { Article } from '~/types/article'
 
-const Home: NextPage = () => {
+type Props = {
+  articles: Array<Article>
+}
+
+const Home: NextPage<Props> = ({ articles }: Props) => {
+  const topArticles = articles
+    .sort((a, b) =>
+      dayjs(a.publishedAt).isBefore(dayjs(b.publishedAt)) ? 1 : -1,
+    )
+    .slice(0, 3)
   return (
     <DefaultLayout>
-      <h1>テンプレート</h1>
-      <p>だんらく</p>
-      <span>すぱん</span>
-      <span>すぱーんぱぱぱ</span>
+      <TopContainer articles={topArticles} />
     </DefaultLayout>
   )
 }
 
 export default Home
+
+export async function getStaticProps() {
+  const data = await cmsClient.get({ endpoint: 'news' })
+
+  return {
+    props: {
+      articles: data.contents,
+    },
+  }
+}

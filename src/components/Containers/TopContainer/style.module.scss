@@ -1,0 +1,73 @@
+.topContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 40px;
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+
+    .heroImage {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+    }
+
+    .catchcopy {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.5;
+      text-align: center;
+      color: var(--color-white);
+    }
+
+    .more {
+      padding-inline: 16px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+
+    .more {
+      padding-inline: 16px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+    }
+
+    .newsList {
+      padding-inline: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 48px;
+    }
+
+    .sponsersList {
+      padding-inline: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 48px;
+    }
+  }
+}
